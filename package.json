@@ -8,4 +8,8 @@
   "dependencies": {
     "md-to-pdf": "^5.1.0"
   },
+  "scripts": {
+    "build": "npx md-to-pdf ./resume/*.md",
+    "dev": "npx md-to-pdf --devtools ./resume/*.md"
+  }
 }
