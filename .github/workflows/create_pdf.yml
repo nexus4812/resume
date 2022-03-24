@@ -16,7 +16,20 @@ jobs:
           sudo apt install fonts-noto
           npm install
           npm run build
-      - uses: actions/upload-artifact@v1
+      - name: Commit PDF files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add resume
+          git commit -m ":memo: [Auto] Generate resume.pdf "
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: create-pdf
-          path: resume/README.pdf
+          github_token: ${{ secrets.TOKEN }} # github token
+
+# アーティファクトとして職務経歴書をGithub上に保存する場合はコメントアウトすれば良い
+# 最終的にPDFもGITで管理することにしたので不要になった（zipだと見づらい）
+#      - uses: actions/upload-artifact@v1
+#        with:
+#          name: create-pdf
+#          path: resume/README.pdf
