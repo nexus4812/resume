@@ -11,12 +11,11 @@ jobs:
           fetch-depth: 1
       - uses: actions/setup-node@v1
         with:
-          node-version: "13.6.0"
+          node-version: "14.6.0"
       - run: |
-          node -v
           npm install
-          npx md-to-pdf ./README.md
+          npm run build
       - uses: actions/upload-artifact@v1
         with:
           name: create-pdf
-          path: ./README.pdf
+          path: resume/README.pdf
