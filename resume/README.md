@@ -73,7 +73,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-## [株式会社セレス](https://ceres-inc.jp/) : 2021/11 ~ 2022/05
+## [株式会社セレス](https://ceres-inc.jp/) : 2022/06 ~ 現在
 
 ### **開発したサービスの概要**
 **ポイントサイトの開発**
